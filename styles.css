@@ -1,0 +1,114 @@
+:root {
+  --bg1: #090a1e;
+  --bg2: #1b0f3a;
+  --accent: #5cf2ff;
+  --accent2: #b967ff;
+  --text: #eef3ff;
+  --panel: rgba(255, 255, 255, 0.09);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #24276c, transparent 35%),
+              radial-gradient(circle at 85% 85%, #7b2cbf, transparent 30%),
+              linear-gradient(165deg, var(--bg1), var(--bg2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.app-shell {
+  width: min(100%, 430px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  background: rgba(8, 11, 40, 0.7);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 40px rgba(92, 242, 255, 0.16);
+  padding: 16px;
+}
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1 { margin: 0; font-size: 1.2rem; letter-spacing: 0.08em; }
+.subtitle { margin: 3px 0 0; opacity: .8; font-size: .78rem; }
+
+.action-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 800;
+  color: #060a2a;
+  background: linear-gradient(135deg, var(--accent), #9efbff);
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1fr 105px;
+  gap: 12px;
+}
+
+#board {
+  width: 100%;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #0e153e, #090b20);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.stat span { display: block; font-size: .72rem; opacity: .7; }
+.stat strong { font-size: 1.2rem; }
+
+.hint {
+  margin-top: auto;
+  font-size: .68rem;
+  line-height: 1.4;
+  opacity: .8;
+  background: rgba(185, 103, 255, .17);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.touch-controls {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.touch-controls button {
+  border: none;
+  border-radius: 12px;
+  padding: 13px 0;
+  color: var(--text);
+  font-size: 1rem;
+  background: linear-gradient(145deg, rgba(92, 242, 255, 0.23), rgba(185, 103, 255, 0.25));
+}
+
+@media (max-height: 760px) {
+  body { padding: 8px; }
+  .app-shell { padding: 10px; }
+  .touch-controls button { padding: 10px 0; }
+}

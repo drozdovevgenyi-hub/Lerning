@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Neon Tetris — Huawei P40 Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-panel">
+      <div>
+        <h1>NEON TETRIS</h1>
+        <p class="subtitle">Оптимизировано под Huawei P40 Pro</p>
+      </div>
+      <button id="startBtn" class="action-btn">Старт</button>
+    </header>
+
+    <section class="game-layout">
+      <canvas id="board" width="300" height="600" aria-label="Игровое поле тетриса"></canvas>
+
+      <aside class="side-panel">
+        <div class="stat"><span>Счёт</span><strong id="score">0</strong></div>
+        <div class="stat"><span>Линии</span><strong id="lines">0</strong></div>
+        <div class="stat"><span>Уровень</span><strong id="level">1</strong></div>
+        <div class="hint">Свайп влево/вправо — движение<br>Тап — поворот<br>Свайп вниз — ускорение</div>
+      </aside>
+    </section>
+
+    <section class="touch-controls" aria-label="Сенсорное управление">
+      <button data-action="left">◀</button>
+      <button data-action="rotate">⟳</button>
+      <button data-action="right">▶</button>
+      <button data-action="down">▼</button>
+    </section>
+  </main>
+
+  <script src="tetris.js"></script>
+</body>
+</html>
